@@ -100,4 +100,16 @@ Algoritmo ProyectoUno
 	ListaNumero[4,2] <- ListaNumero[3,1] - ListaNumero[4,1]
 	ListaNumero[5,2] <- ListaNumero[5,1]
 	
+	Para i Desde 1 Hasta 5 Hacer
+		Segun i Hacer
+			1:
+				Escribir " Costo Final del Producto [", ListaTexto[i] ,"] es................$", ListaNumero[i,2]
+				Escribir "*******************************************************************";
+			5:
+				Escribir "El costo de Envío a la cuidad de [", ListaTexto[i] ,"] es [$", ListaNumero[i,2], "]";
+				
+			De Otro Modo:
+				Escribir ListaTexto[i] , ListaNumero[i,2];
+		Fin Segun
+	FinPara
 FinAlgoritmo

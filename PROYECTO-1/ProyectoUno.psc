@@ -14,8 +14,8 @@ FinFuncion
 
 Algoritmo ProyectoUno
 	
-	Definir PrecioOriginal, CuponDescuento, Cantidad, Peso, ListaNumero, aux Como real
-	Definir Respuesta, Destino, ListaTexto, aux2 Como Caracter
+	Definir PrecioOriginal, CuponDescuento, Cantidad, Peso, ListaNumero Como real
+	Definir Respuesta, Destino, ListaTexto Como Caracter
 	
 	Dimension ListaNumero[5,2]
 	Dimension ListaTexto[5]
@@ -71,5 +71,33 @@ Algoritmo ProyectoUno
 	Peso <- ValidaNumero(ValNumero)
 	
 	Limpiar Pantalla
+	
+	// Empiezan los cálculos
+	
+	si Respuesta = "s" o Respuesta = "S" Entonces
+		ListaNumero[2,1] <- ListaNumero[1,1] - (ListaNumero[1,1] * DESC)
+		
+	SiNo
+		ListaNumero[2,1] <- ListaNumero[1,1]
+		
+	FinSi
+	
+	ListaNumero[3,1] <- (ListaNumero[2,1] * IVA)
+	
+	si Cantidad >= 2 Entonces
+		ListaNumero[4,1] <- ListaNumero[3,1] - (ListaNumero[3,1] * DESCANT)
+		
+	SiNo
+		ListaNumero[4,1] <- ListaNumero[3,1]
+		
+	FinSi
+	
+	// Relleno la Matriz con los datos a mostrar por pantalla
+	ListaNumero[5,1] <- (KILO * Peso) + ENVIO
+	ListaNumero[1,2] <- (ListaNumero[4,1] * Cantidad) + ListaNumero[5,1]
+	ListaNumero[2,2] <- ListaNumero[1,1] - ListaNumero[2,1]
+	ListaNumero[3,2] <- ListaNumero[3,1] - ListaNumero[2,1]
+	ListaNumero[4,2] <- ListaNumero[3,1] - ListaNumero[4,1]
+	ListaNumero[5,2] <- ListaNumero[5,1]
 	
 FinAlgoritmo

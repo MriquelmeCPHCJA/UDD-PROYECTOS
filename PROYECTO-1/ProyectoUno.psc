@@ -27,9 +27,9 @@ Algoritmo ProyectoUno
 	DESCANT <- 0.05
 	
 	
-	ListaTexto[2] <- "Descuento por Cupón..................................$"
-	ListaTexto[3] <- "Impuesto 12%.........................................$"
-	ListaTexto[4] <- "Descuento por Cantidad de Artículos..................$"
+	ListaTexto[2] <- "Descuento por Cupón................................... $"
+	ListaTexto[3] <- "Impuesto 12%........................................ $"
+	ListaTexto[4] <- "Descuento por Cantidad de Artículos................. $"
 	
 	Escribir "Ingrese Nombre de Producto"
 	//Llamada a función para leer y validar nombre no vacio
@@ -103,13 +103,15 @@ Algoritmo ProyectoUno
 	Para i Desde 1 Hasta 5 Hacer
 		Segun i Hacer
 			1:
-				Escribir " Costo Final del Producto [", ListaTexto[i] ,"] es................$", ListaNumero[i,2]
-				Escribir "*******************************************************************";
+				Escribir " Costo Final del Producto [", ListaTexto[i] ,"] es................................$", ListaNumero[i,2]
+				Escribir "****************************************************************************";
+			4:
+				Escribir ListaTexto[i], ListaNumero[i,2], "........ ", Cantidad, "x$", ListaNumero[i,1]
 			5:
-				Escribir "El costo de Envío a la cuidad de [", ListaTexto[i] ,"] es [$", ListaNumero[i,2], "]";
+				Escribir "El costo de Envío a la cuidad de [", ListaTexto[i] ,"] es ..................... $", ListaNumero[i,2];
 				
 			De Otro Modo:
-				Escribir ListaTexto[i] , ListaNumero[i,2];
+				Escribir ListaTexto[i] , ListaNumero[i,2], " ......... $", ListaNumero[i,1];
 		Fin Segun
 	FinPara
 FinAlgoritmo

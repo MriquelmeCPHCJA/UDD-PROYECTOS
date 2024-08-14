@@ -6,7 +6,6 @@
     <img alt="Static Badge" src="https://img.shields.io/badge/UDD-DWFS-orange">
     <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/MriquelmeCPHCJA/UDD-PROYECTOS?color=green">
     <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/t/MriquelmeCPHCJA/UDD-PROYECTOS">
-    
 </div>
 
 ## DWFS C16 Bootcamper

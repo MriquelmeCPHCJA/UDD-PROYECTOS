@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>PROYECTO 2: Sistema de Votación<h1>
+    <h1>PROYECTO 2: Sistema de Votación POO & PF<h1>
 </div>
 
   ## ⚡ I use:

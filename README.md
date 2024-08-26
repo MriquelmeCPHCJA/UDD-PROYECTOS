@@ -1,6 +1,13 @@
 <div align="center">
-    <h1> Luis Marcelo Riquelme </h1>
+    <h1> Repositorio de Proyectos UDD DWFS C16 </h1>
+    <h2>Luis Marcelo Riquelme</h2>
 </div>
+
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=vscode,js,html,css,git" />
+  </a>
+</p>
 
 <div align="center">
     <img alt="Static Badge" src="https://img.shields.io/badge/UDD-DWFS-orange">
@@ -8,28 +15,23 @@
     <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/t/MriquelmeCPHCJA/UDD-PROYECTOS">
 </div>
 
-## DWFS C16 Bootcamper
 
-### Algo sobre mí
+## 📚 Descripción del Repositorio
 
-Me encanta la Informática y las nuevas tecnologías. Durante mi carrera en el área he adquirido diferentes conocimientos en:
+Este repositorio contiene los proyectos realizados durante el avance del Curso DWFS C-16, desde el Módulo-1 hasta el Módulo-7.
 
-* Sistemas Operativos
-    * Windows
-    * MacOs
-    * Linux
-* Servidores
-    * Windows Server
-    * Linux
-        * Red Hat
-        * Debian
-        * Centos
-        * Suse
-* Redes de Datos
-    * Cableado Estructurado
-    * Fibra Optica
-    * Radio Enlaces
+## 📂 Estructura del Repositorio
+A medida que se vaya avanzando los Módulos, aparecerán la estructura correspondiente.
 
-Y hoy me encuentro realizando un super **Bootcamp** sobre **Desarrollo Web Full Stack**, me encuentro muy emocionado por ésta nueva experiencia y conocimientos para mi desarrollo personal. 
+- **`PROYECTO-1/`**: Contiene proyecto Módulo-1: Algoritmo de Sistema de Costos (pseudocodigo).
+- **`PROYECTO-2/`**: Contiene Proyecto Módulo-2: Sistema de Votación en Javascript.
+- **`PROYECTO-3/`**: Contiene proyecto Módulo-3: 3 Landing de Negocio (HTML & CSS).
+- **`PROYECTO-4/`**: Contiene Proyecto Módulo-4: Reservas Hoteleras.
+- **`PROYECTO-5/`**: Contiene proyecto Módulo-5: Aplicación Web con REACT.
+- **`PROYECTO-6/`**: Contiene Proyecto Módulo-6: Aplicación Backend con Autenticación.
+- **`PROYECTO-7/`**: Contiene proyecto Módulo-7: Aplicación Fullstack de Comercio Electrónico.
+
+
+
 
 ***¡ Vamos que se puede!***

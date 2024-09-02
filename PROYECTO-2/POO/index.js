@@ -16,3 +16,4 @@ class Preguntas {
         this.votos = new Array(opciones.length).fill(0); // Creo un nuevo arreglo del mismo largo de opciones y que todas las posiciones contengan un valor 0 para guardar los votos por opcion.
     }
 }
+

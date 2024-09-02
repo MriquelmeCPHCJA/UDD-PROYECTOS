@@ -16,12 +16,12 @@ const nuevaEncuesta = () => {
     do {
         let opciones = [];
         
-        let pregunta = validaTexto("Ingrese la Pregunta de su Encuesta");
+        let pregunta = validaTexto("Ingrese Nueva Encuesta");
         
         do {
             resp = "";
-            opciones.push(validaTexto(`Ingrese nueva opción de respuesta para la Encuesta \n "${pregunta.toUpperCase()}"`));
-            resp = validaRespuesta("Quieres ingresar otra Opcion de respuesta para la Encuesta");
+            opciones.push(validaTexto(`Ingrese opción de respuesta para \n "${pregunta.toUpperCase()}"`));
+            resp = validaRespuesta("¿Quieres ingresar otra respuesta? S/N");
         } while (resp === "s" || opciones.length < 2);
 
         let nuevaEncuesta = {

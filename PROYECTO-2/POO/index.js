@@ -1,3 +1,5 @@
+
+// Creo la clase Encuesta que contiene los metodos registrarVoto y mostrarResultados
 class Encuesta {
   constructor(id, nombreEncuesta, respuestas) {
     this.id = id;
@@ -6,111 +8,103 @@ class Encuesta {
     this.votos = Array(respuestas.length).fill(0);
   }
 
+  // Metodo para registrar el voto
   registrarVoto(respuestaIndex) {
-    if (respuestaIndex >= 0 && respuestaIndex < this.respuestas.length) {
-      this.votos[respuestaIndex]++;
-      alert("¡Voto registrado!");
+    if (respuestaIndex >= 0 && respuestaIndex < this.respuestas.length) { // Verifica que existan respuestas
+      this.votos[respuestaIndex]++; // Suma un voto a la respuesta seleccionada
+      alert("¡Voto registrado!"); // Muestra mensaje de confirmación
     } else {
-      alert("Respuesta no válida.");
+      alert("Respuesta no válida."); // Muestra mensaje de error si la respuesta no es valida o no existen respuestas
     }
   }
 
+  // Metodo para mostrar los resultados
   mostrarResultados() {
-    let muestraVotos = `Encuesta ${this.id}: ${this.nombreEncuesta}\n`;
-    this.respuestas.forEach((respuesta, index) => {
-      muestraVotos += `  Respuesta ${index + 1}: ${respuesta} - ${this.votos[index]} votos\n`;
+    let muestraVotos = `Encuesta ${this.id}: ${this.nombreEncuesta}\n`; // Guarda el nombre de la encuesta y su id
+    this.respuestas.forEach((respuesta, index) => {  // Recorro el array de respuestas
+      muestraVotos += `  Respuesta ${index + 1}: ${respuesta} - ${this.votos[index]} votos\n`;  // Guardo el nombre de la respuesta y la cantidad de votos
     });
-    alert(muestraVotos);
+    alert(muestraVotos); // Mensaje con los resultados
   }
 }
 
-class SistemaDeEncuestas {
-  constructor() {
-    this.encuestas = [];
+class SistemaDeEncuestas { // Creo la clase SistemaDeEncuestas
+  constructor() { // Creo el constructor
+    this.encuestas = []; // Creo un array vacio para guardar las encuestas
   }
 
-  crearEncuesta() {
+  crearEncuesta() { // Metodo para crear una nueva encuesta
     let respPrincipal = "";
 
-    do {
-      let opciones = [];
-      let pregunta = validaTexto("Ingrese nueva Encuesta");
+    do { // Ciclo para crear una nueva encuesta
+      const opciones = [];
+      const pregunta = validaTexto("Ingrese nueva Encuesta");
       let resp = "";
 
       do {
-        opciones.push(
-          validaTexto(
-            `Ingrese respuesta para \n "${pregunta.toUpperCase()}"`
-          )
-        );
+        opciones.push(validaTexto(`Ingrese respuesta para \n "${pregunta.toUpperCase()}"`)); // Agrega una nueva respuesta al arreglo de opciones
 
-        resp = validaRespuesta(
-          `¿Quieres ingresar más Opciones de respuesta para "${pregunta.toUpperCase()}"?`
-        );
+        resp = validaRespuesta(`¿Quieres ingresar más Opciones de respuesta para "${pregunta.toUpperCase()}"?`); // Pregunta si se desea agregar más respuestas
 
         if (resp === "n" && opciones.length < 2) {
-          alert("Deben ser mínimo 2 opciones de respuesta");
-          resp = "s";
+          alert("Deben ser mínimo 2 opciones de respuesta"); // Muestra mensaje de error si no se ingresan al menos 2 respuestas
+          resp = "s"; // cambiar la respuesta a "s" para que vuelva a preguntar
         }
-      } while (resp === "s");
+      } while (resp === "s"); // Repite el ciclo si la respuesta es "s"
 
-      const nuevaEncuesta = new Encuesta(
-        this.encuestas.length + 1,
-        pregunta,
-        opciones
-      );
-      this.encuestas.push(nuevaEncuesta);
+      const nuevaEncuesta = new Encuesta(this.encuestas.length + 1, pregunta, opciones); // Guarda la nueva encuesta
+      this.encuestas.push(nuevaEncuesta); // Agrega la nueva encuesta al arreglo de encuestas
 
-      respPrincipal = validaRespuesta(`¿Quieres agregar una "Nueva Encuesta"?`);
-    } while (respPrincipal === "s");
+      respPrincipal = validaRespuesta(`¿Quieres agregar una "Nueva Encuesta"?`); // Pregunta si se desea agregar una nueva encuesta
+    } while (respPrincipal === "s"); // Repite el ciclo si la respuesta es "s"
   }
 
-  votarEncuesta() {
-    if (this.encuestas.length === 0) {
-      alert("No existen encuestas disponibles para votar.");
-      return;
+  votarEncuesta() { // Metodo para votar en una encuesta
+    if (this.encuestas.length === 0) { // Verifica si existen encuestas
+      alert("No existen encuestas disponibles para votar."); // Muestra mensaje de error si no existen encuestas
+      return; 
     }
 
-    let seguirVotando = "";
+    let seguirVotando = ""; // Se da valor vacio a la variable seguirVotando
 
     do {
-      let seleccionEncuesta = "Seleccione una encuesta:\n";
-      this.encuestas.forEach((encuesta, index) => {
-        seleccionEncuesta += `${index + 1}. ${encuesta.nombreEncuesta}\n`;
+      let seleccionEncuesta = "Seleccione una encuesta:\n"; // Mensaje para seleccionar una encuesta
+      this.encuestas.forEach((encuesta, index) => { // Recorre el array de encuestas
+        seleccionEncuesta += `${index + 1}. ${encuesta.nombreEncuesta}\n`; // Creao una cadena de texto que contiene una lista de encuestas con su respectivo número al principio
       });
 
-      let encuestaIndex = parseInt(prompt(seleccionEncuesta)) - 1;
+      const encuestaIndex = parseInt(prompt(seleccionEncuesta)) - 1; // Guarda el número de la encuesta seleccionada en ecuestaIndex
 
-      if (encuestaIndex >= 0 && encuestaIndex < this.encuestas.length) {
-        let encuesta = this.encuestas[encuestaIndex];
+      if (encuestaIndex >= 0 && encuestaIndex < this.encuestas.length) { // Verifica que la encuesta seleccionada sea válida
+        const encuesta = this.encuestas[encuestaIndex]; // Guarda la encuesta seleccionada en la variable encuesta
 
-        let seleccionRespuesta = `Seleccione una respuesta para "${encuesta.nombreEncuesta}":\n`;
-        encuesta.respuestas.forEach((respuesta, index) => {
-          seleccionRespuesta += `${index + 1}. ${respuesta}\n`;
+        let seleccionRespuesta = `Seleccione una respuesta para "${encuesta.nombreEncuesta}":\n`; // Mensaje para mostrar al usuario una opcion de respuesta dentro de la encuesta seleccionada
+        encuesta.respuestas.forEach((respuesta, index) => { 
+          seleccionRespuesta += `${index + 1}. ${respuesta}\n`; // creo una cadena de texto que contiene una lista de respuestas con su respectivo número al principio
         });
 
-        let respuestaIndex = parseInt(prompt(seleccionRespuesta)) - 1;
+        const respuestaIndex = parseInt(prompt(seleccionRespuesta)) - 1;
 
-        encuesta.registrarVoto(respuestaIndex);
+        encuesta.registrarVoto(respuestaIndex); //llamo al metodo registrarVoto de la clase Encuesta con la respuesta seleccionada para registrar el voto
       } else {
-        alert("Encuesta no válida.");
+        alert("Encuesta no válida."); // Muestra mensaje de error si el usuario selecciona una encuesta no válida
       }
 
-      seguirVotando = validaRespuesta("¿Deseas seguir votando?");
-    } while (seguirVotando === "s");
+      seguirVotando = validaRespuesta("¿Deseas seguir votando?"); // Pregunta si se desea seguir votando
+    } while (seguirVotando === "s"); // Repite el ciclo si la respuesta es "s"
   }
 
-  mostrarResultados() {
+  mostrarResultados() { // Metodo para mostrar los resultados de las encuestas
     this.encuestas.forEach((encuesta) => {
-      encuesta.mostrarResultados();
+      encuesta.mostrarResultados(); // llama al metodo mostrarResultados de la clase Encuesta
     });
   }
 
-  iniciarSistema() {
+  iniciarSistema() { // Metodo para iniciar el sistema
     let opcionMenu = 0;
 
     do {
-      opcionMenu = parseInt(
+      opcionMenu = parseInt( // Pide al usuario que seleccione una opción
         prompt(`Selecciona una opción:
         1. Nueva Encuesta
         2. Votar Encuesta
@@ -134,10 +128,10 @@ class SistemaDeEncuestas {
         default:
           alert("Opción no válida.");
       }
-    } while (opcionMenu !== 4);
+    } while (opcionMenu !== 4); // Repite el ciclo mientras la opción es diferente de 4 "Salir"
   }
 }
 
 
-const sistema = new SistemaDeEncuestas();
-sistema.iniciarSistema();
+const sistema = new SistemaDeEncuestas(); // Creo la instancia de la clase SistemaDeEncuestas
+sistema.iniciarSistema(); // Llamo al metodo iniciarSistema de la clase SistemaDeEncuestas

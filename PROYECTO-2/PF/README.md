@@ -47,10 +47,10 @@ Este proyecto es una aplicación interactiva en JavaScript que permite a los usu
 ### Uso
 Cuando se ejecuta el código, se presenta un menú con las siguientes opciones:
 
-- 1. Nueva Encuesta: Crea una nueva encuesta.
-- 2. Votar Encuesta: Permite votar en una de las encuestas disponibles.
-- 3. Mostrar Resultados: Muestra los resultados de todas las encuestas.
-- 4. Salir: Sale de la aplicación.
+- 1) Nueva Encuesta: Crea una nueva encuesta.
+- 2) Votar Encuesta: Permite votar en una de las encuestas disponibles.
+- 3) Mostrar Resultados: Muestra los resultados de todas las encuestas.
+- 4) Salir: Sale de la aplicación.
 
 ### Ejecución del Programa
 El programa se ejecuta en un bucle que continúa hasta que el usuario elige salir (opción 4).

@@ -22,7 +22,7 @@ const validaRespuesta = (opt) => {
         respuesta = validaTexto(opt);
         
         if (respuesta !== "s" && respuesta !== "n") {
-            alert(opt);
+            alert('opcion no valida\n Ingrese "s" para si o "n" para no');
         } 
     }
     return respuesta;

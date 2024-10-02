@@ -44,7 +44,7 @@ class SistemaDeEncuestas { // Creo la clase SistemaDeEncuestas
       do {
         opciones.push(validaTexto(`Ingrese respuesta para \n "${pregunta.toUpperCase()}"`)); // Agrega una nueva respuesta al arreglo de opciones
 
-        resp = validaRespuesta(`¿Quieres ingresar más Opciones de respuesta para "${pregunta.toUpperCase()}"?`); // Pregunta si se desea agregar más respuestas
+        resp = validaRespuesta(`¿Quieres ingresar más Opciones de respuesta para "${pregunta.toUpperCase()}"? (s/n)?`); // Pregunta si se desea agregar más respuestas
 
         if (resp === "n" && opciones.length < 2) {
           alert("Deben ser mínimo 2 opciones de respuesta"); // Muestra mensaje de error si no se ingresan al menos 2 respuestas
@@ -55,7 +55,7 @@ class SistemaDeEncuestas { // Creo la clase SistemaDeEncuestas
       const nuevaEncuesta = new Encuesta(this.encuestas.length + 1, pregunta, opciones); // Guarda la nueva encuesta
       this.encuestas.push(nuevaEncuesta); // Agrega la nueva encuesta al arreglo de encuestas
 
-      respPrincipal = validaRespuesta(`¿Quieres agregar una "Nueva Encuesta"?`); // Pregunta si se desea agregar una nueva encuesta
+      respPrincipal = validaRespuesta(`¿Quieres agregar una "Nueva Encuesta"? (s/n)?`); // Pregunta si se desea agregar una nueva encuesta
     } while (respPrincipal === "s"); // Repite el ciclo si la respuesta es "s"
   }
 
@@ -90,7 +90,7 @@ class SistemaDeEncuestas { // Creo la clase SistemaDeEncuestas
         alert("Encuesta no válida."); // Muestra mensaje de error si el usuario selecciona una encuesta no válida
       }
 
-      seguirVotando = validaRespuesta("¿Deseas seguir votando?"); // Pregunta si se desea seguir votando
+      seguirVotando = validaRespuesta("¿Deseas seguir votando? (s/n)?"); // Pregunta si se desea seguir votando
     } while (seguirVotando === "s"); // Repite el ciclo si la respuesta es "s"
   }
 

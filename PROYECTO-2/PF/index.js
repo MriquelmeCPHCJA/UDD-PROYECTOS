@@ -3,13 +3,13 @@ const nuevaEncuesta = () => { //Funcion para crear una nueva encuesta
   
   do {
     let opciones = []; //Arreglo para guardar las opciones de respuesta
-    let pregunta = validaTexto("Ingrese nueva Encuesta");
+    let pregunta = validaTexto("Ingrese una nueva Encuesta");
     let resp = "";
     
     do {
       opciones.push(validaTexto(`Ingrese respuesta para \n "${pregunta.toUpperCase()}"`)); //Se pide la opcion de respuesta y se guarda en el arreglo despues de validarla
       
-      resp = validaRespuesta(`Quieres ingresar más Opcions de respuesta para "${pregunta.toUpperCase()}"`);
+      resp = validaRespuesta(`Quieres ingresar más Opcions de respuesta para "${pregunta.toUpperCase()}" (s/n)?`); //Se pregunta si se quiere agregar mas opciones de respuesta
     
       if (resp === "n" && opciones.length < 2) { //Se valida que se hayan ingresado minimo 2 opciones de respuesta
         alert("Deben ser minimo 2 opciones de respuesta");
@@ -27,7 +27,7 @@ const nuevaEncuesta = () => { //Funcion para crear una nueva encuesta
     
     encuestas.push(nuevaEncuesta); //Se agrega la nueva encuesta al arreglo principal de encuestas
     
-    respPrincipal = validaRespuesta(`¿Quieres agregar unea "Nueva Encuesta"?`); //Se pregunta si se quiere agregar una nueva encuesta
+    respPrincipal = validaRespuesta(`¿Quieres agregar unea "Nueva Encuesta"? (s/n)?`); //Se pregunta si se quiere agregar una nueva encuesta
   } while (respPrincipal === "s"); //Se repite el ciclo si la respuesta es "s"
 };
 
@@ -53,7 +53,7 @@ const votarEncuesta = () => { //Funcion para votar en una encuesta
 
   do {
     
-    let seleccionEncuesta = "Seleccione una encuesta:\n"; //Variable para mostrar las encuestas disponibles
+    let seleccionEncuesta = "Seleccione una encuesta para responder:\n"; //Variable para mostrar las encuestas disponibles
     encuestas.forEach((encuesta, index) => { //Se recorre el arreglo de encuestas
       seleccionEncuesta += `${index + 1}. ${encuesta.nombreEncuesta}\n`; //Se agrega el nombre de la encuesta al texto
     });
@@ -80,7 +80,7 @@ const votarEncuesta = () => { //Funcion para votar en una encuesta
       alert("Encuesta no válida.");
     }
 
-    seguirVotando = validaRespuesta("¿Deseas seguir votando?"); //Se pregunta si se quiere seguir votando
+    seguirVotando = validaRespuesta("¿Deseas seguir votando? (s/n)?"); //Se pregunta si se quiere seguir votando
   } while (seguirVotando === "s"); //Se repite el ciclo si la respuesta es "s"
 };
 

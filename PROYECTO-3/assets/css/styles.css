@@ -14,44 +14,67 @@ body{
  } 
 
 
-.layout {
-    margin: 0.2rem;
-    border: 0.5rem solid #000;
-    height: 100vh;
+.layout,.layout-top,.top-main {
+    /* margin: 0.2rem; */
+    /* border: 0.5rem solid #000; */
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
 }
 
 .layout-top {
     /* margin: 0.5rem; */
-    border: 1rem solid #000;
-    height: 20vh;
+    /* border: 1rem solid #000; */
+    height: 70rem;
     width: 100%;
-    background-color: #f1f1f1;
-    display: flex;
-    flex-direction: column;
+    background-image: url(../img/sunset-boat.jpg);
+    background-size: cover;
+    background-position: center;
+    /* background-color: #e62291; */
+    /* display: flex;
+    flex-direction: column; */
     justify-content: space-between;
+}
+
+.top-header,.top-logo {
+    display: flex;
+    flex-direction: row;
 }
 
 .top-header {
     /* margin: 0.5rem; */
-    border: 1rem solid red;
+    /* border: 1rem solid red; */
     /* height: 20vh; */
     width: 100%;
-    background-color: aqua;
-    display: flex;
-    flex-direction: row;
+    /* background-color: aqua; */
+    /* display: flex;
+    flex-direction: row; */
     justify-content: space-between;
 }
 
 .top-logo{
-    border: 0.5rem solid green;
+    /* border: 0.5rem solid green; */
     /* height: 50%; */
-    background-color: yellow;
-    display: flex;
-    flex-direction: row;
+    /* background-color: yellow; */
+    /* display: flex;
+    flex-direction: row; */
     justify-content: center;
     align-items: center;
+    padding: 0.5rem;
+}
+
+.logo-img,.logo-name {
+    padding: 0.5rem;
+}
+
+.logo-img img {
+    width: 6rem;    
+}
+
+.logo-name h3 {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
 }
 
 .top-nav {
@@ -62,26 +85,39 @@ body{
 }
 
 .top-main {
+    /* display: flex;
+    flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    /* background-color: white; */
+}
 
+.top-main p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
 }
 
 .layout-cards {
     /* margin: 0.5rem; */
-    border: 1rem solid green;
-    height: 60vh;
+    /* border: 1rem solid green; */
+    /* height: 60vh; */
     width: 100%;
     background-color: yellow;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 0.5rem;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    justify-content: space-around;
+    padding: 3rem 0 3rem 0;
+    gap: 2rem;
 }
 
 .cards-car {
     border: 0.5rem solid red;
-    height: 10%;
-    width: 30%;
+    height: 15rem;
+    width: 45rem;
     background-color: aqua;
+    /* gap: 0.5rem; */
 }
 
 .layout-footer {

@@ -9,11 +9,11 @@
 
 /* Ajustes de medidas globales y hacer al rem de 10px */
 
-html{
+html {
     font-size: 10px;
 }
 
-body{
+body {
     font-family: "Roboto", sans-serif;
     font-size: 1.6rem;
  } 
@@ -21,9 +21,9 @@ body{
 
 /* Estilo al contenedor Principal */
 
-.layout {
+/* .layout {
 
-}
+} */
 
 /* Estilo Flex a contenedores similares */
 
@@ -91,14 +91,14 @@ body{
 }
 
 .top-nav {
-    /* border: 0.5rem solid blue; */
-    width: 50%;
+    border: 0.5rem solid blue;
+    /* width: 50%; */
     /* height: 50%; */
     /* background-color: pink; */
-    display: flex;
+    /* display: flex; */
     /* flex-direction: row; */
     /* text-align: right; */
-    /* justify-content: space-around; */
+    /* justify-content: flex-end; */
     /* align-items: center; */
 }
 
@@ -110,7 +110,7 @@ body{
 
 .nav-link:hover {
     color: #FFD700;
-    transform: scale(0.9);
+    /* transform: scale(0.9); */
 }
 
 .top-main {
@@ -143,18 +143,19 @@ body{
     /* flex-direction: row; */
     justify-content: space-around;
     padding: 3rem 0 3rem 0;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .cards-card {
-    border: 0.5rem solid white;
+    border: 0.6rem solid white;
     /* border: 0.5rem solid rgb(149, 151, 152); */
     border-radius: 1.6rem;
     /* height: 75rem; */
     width: 45rem;
     /* height: 65rem; */
-    background-color: rgba(255, 255, 255, 0.2);
-    /* background-color: #FFFDCA; */
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    background-color: white;
     /* gap: 0.5rem; */
     transition: transform 0.3s;
     cursor: pointer;
@@ -162,7 +163,7 @@ body{
 
 .cards-card:hover{
     transform: scale(1.02);
-    border: 0.5rem solid #f6bc1fd8;
+    border: 0.5rem solid white;
 }
 
 
@@ -196,9 +197,9 @@ body{
 .card-text {
     padding: 1rem;
     font-size: 1.6rem;
-    color: white;
+    color: black;
     text-align: justify;
-    
+    /* background-color: rgba(0, 0, 0, 0.5); */
     border-radius: 0 0 1.6rem 1.6rem;
 }
 

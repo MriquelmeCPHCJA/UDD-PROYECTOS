@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 
 
@@ -18,12 +18,28 @@ body {
     font-size: 1.6rem;
  } 
 
+ /* Personalización del color del toggler del menu */
+
+ .custom-toggler.navbar-toggler {
+    border-color: white;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24' /%3E%3C/svg%3E");
+
+}
+
+/* -------------------------------------------------- */
+
 
 /* Estilo al contenedor Principal */
 
-/* .layout {
+.layout {
+    margin: 0;
+    padding: 0;
+} 
 
-} */
+/* -------------------------------------------------- */
 
 /* Estilo Flex a contenedores similares */
 
@@ -65,6 +81,10 @@ body {
     justify-content: space-between;
 }
 
+/* .custom-toggler.navbar-toggler {
+    border-color: white;
+} */
+
 .top-logo{
     /* border: 0.5rem solid green; */
     /* height: 50%; */
@@ -76,21 +96,21 @@ body {
     padding: 0.5rem;
 }
 
-.logo-img,.logo-name {
+/* .logo-name {
     padding: 0.5rem;
-}
-
-/* .logo-img img {
-    width: 4rem;    
 } */
 
-.logo-name {
+.logo-img {
+    width: 4rem;    
+}
+
+/* .logo-name {
     color: white;
     font-size: 1.5rem;
     text-align: center;
-}
+} */
 
-.top-nav {
+/* .top-nav {
     border: 0.5rem solid blue;
     /* width: 50%; */
     /* height: 50%; */
@@ -99,8 +119,8 @@ body {
     /* flex-direction: row; */
     /* text-align: right; */
     /* justify-content: flex-end; */
-    /* align-items: center; */
-}
+    /* align-items: center; 
+} */ 
 
 .nav-link,.nav-link:visited {
     /* gap: 1rem; */
@@ -210,3 +230,39 @@ body {
     width: 100%;
     background-color: black;
 }
+
+
+
+
+
+
+/* Móviles pequeños */
+@media (max-width: 320px) {
+    /* Estilos para móviles pequeños */
+  }
+  
+  /* Móviles */
+  @media (min-width: 321px) and (max-width: 480px) {
+    /* Estilos para móviles */
+  }
+  
+  /* Tablets pequeños */
+  @media (min-width: 481px) and (max-width: 767px) {
+    /* Estilos para tablets pequeños */
+  }
+  
+  /* Tablets */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    /* Estilos para tablets */
+  }
+  
+  /* Laptops y desktops pequeños */
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    /* Estilos para laptops y desktops pequeños */
+  }
+  
+  /* Laptops y desktops */
+  @media (min-width: 1280px) {
+    /* Estilos para laptops y desktops */
+  }
+  

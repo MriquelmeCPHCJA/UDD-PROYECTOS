@@ -111,21 +111,48 @@ body {
     color: white;
 }
 
-.btn {
-    width: 30%;
+.btn-warning {
+    width: 50%;
     border-radius: 1rem;
     --bs-btn-font-size: 1.5rem;
+    --bs-btn-font-weight: 800;
+    --bs-btn-hover-color: #000;
+    --bs-btn-color: #000;
+}
+
+.btn-info, .btn-mas {
+    width: 100%;
+    border-radius: 1rem;
+    --bs-btn-font-size: 1.5rem;
+    --bs-btn-font-weight: 800;
+    --bs-btn-hover-color: #000;
+    --bs-btn-color: #000;
+}
+
+.btn-info {
+    --bs-btn-bg: #31D2F2;
+    --bs-btn-border-color: #31D2F2;
+    --bs-btn-hover-bg: #2ab5d0;
+    --bs-btn-hover-border-color: #2ab5d0;
+    font-weight: 800;
+}
+
+.btn-mas {
+    --bs-btn-bg: #FFD700;
+    --bs-btn-border-color: #FFD700;
+    --bs-btn-hover-bg: #d0b206;
+    --bs-btn-hover-border-color: #d0b206;
+    margin-bottom: 0.5rem;
 }
 
 .main-msg{
-
     font-size: 2rem;
     font-weight: 700;
     color: white;
 }
 
 .main-inscription {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 700;
     color: white;
     width: 50%;
@@ -136,15 +163,22 @@ body {
 }
 
 .main-inscription h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
-    color: blue;
+    color: rgb(8, 8, 213);
     text-align: center;
     /* margin-bottom: 3rem; */
 }
 
-.form-group input, label{
-    margin: 1rem;
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.form-control {
+    width: 100%;
 }
 
 .layout-cards {
@@ -205,10 +239,85 @@ body {
 }
 
 .layout-footer {
-    height: 20vh;
+    display: flex;
+    /* grid-auto-columns: max-content; */
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    padding: 1rem 4rem 1rem 4rem;
+    /* gap: 1.5rem; */
     width: 100%;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.908);
 }
+
+.footer-about, .footer-copy, .footer-minfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem 1rem 2rem;
+    width: 35%;
+    /* border: white 0.2rem solid; */
+    color:#7F7871;
+    text-align: center;
+    gap: 1rem;
+}
+
+li {
+    list-style: none;
+    color: #7F7871;
+}
+
+li a {
+    color: #7F7871;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+li a:visited {
+    color: #7F7871;
+}
+
+.about-btn{
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.about-rrss {
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    padding: 1rem;
+}
+
+.about-rrss :hover{
+    color: #FFF;
+}
+
+.fab {
+    color: #7F7871;
+}
+
+.about-title h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #7F7871;
+}
+
+.btn-contact, .btn-work{
+    --bs-btn-font-weight: 600;
+    --bs-btn-font-size: 1.5rem;
+    --bs-btn-color: #7F7871;
+    --bs-btn-border-color: #7F7871;
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #fff;
+}
+
 
 /* Media Queries */
 
@@ -223,81 +332,19 @@ body {
 @media only screen and (max-width: 992px) {
 
 
-/* }  */
+ }  
 
 /* tablets, 768px y más) */
-/* @media only screen and (max-width: 768px) { */
+ @media only screen and (max-width: 768px) { 
 
     
 
-/* } */
+ } 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (max-width: 600px) { */
+@media only screen and (max-width: 600px) { 
 
-    .top-main {
-        padding: 2rem;
-        gap: 2rem;
-        flex-wrap: wrap;
-    }
-    
-    .top-main h1 {
-        font-family: "Caveat", cursive;
-        font-size: 2rem;
-        font-weight: 600;
-        color: white;
-        background-color: black;
-        width: 100%;
-        padding: 0.5rem;
-        text-align: center;
-        border-radius: 2rem;
-        margin-bottom: 2rem;
-    }
-    
-    .top-main p {
-        font-size: 1.5rem;
-        font-weight: 400;
-        color: yellow;
-    }
-    
-    .btn {
-        width: 100%;
-        --bs-btn-font-size: 1.5rem;
-    }
-    
 
-    .main-inscription {
-        width: 100%;
-        padding: 2rem;
-    }
-    
-    .layout-cards {
-        padding: 0.9rem;
-        gap: .7rem;
-    }
-    
-    .cards-card {
-        border: 0.2rem solid white;
-        border-radius: 1.6rem;
-        width: 40%;
-    }
-    
-    .card-title {
-        padding: 0.7rem;
-        font-size: 0.7rem;
-        font-weight: 300;
-    }
-    
-    .card-text {
-        padding: 0.5rem;
-        font-size: 1rem;
-    }
-
-    .layout-footer {
-        height: 20vh;
-        width: 100%;
-        background-color: black;
-    }
     
 }
 

@@ -1,11 +1,11 @@
 <div align="center">
-    <h1> Repositorio de Proyectos UDD DWFS C16 </h1>
+    <h1> PROYECTO 3: Landing de Negocio </h1>
     <h2>Luis Marcelo Riquelme</h2>
 </div>
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=vscode,js,html,css,git" />
+    <img src="https://skillicons.dev/icons?i=vscode,html,css,git" />
   </a>
 </p>
 
@@ -16,22 +16,29 @@
 </div>
 
 
-## 📚 Descripción del Repositorio
+## 📚 Requerimientos del Proyecto
 
-Este repositorio contiene los proyectos realizados durante el avance del Curso DWFS C-16, desde el Módulo-1 hasta el Módulo-7.
+Este proyecto está enfocado en construir una página landing para un negocio.
 
-## 📂 Estructura del Repositorio
-A medida que se vaya avanzando los Módulos, aparecerán la estructura correspondiente.
+ Incluir estas secciones en la interfaz:
 
-- **`PROYECTO-1/`**: Contiene proyecto Módulo-1: Algoritmo de Sistema de Costos (pseudocodigo).
-- **`PROYECTO-2/`**: Contiene Proyecto Módulo-2: Sistema de Votación en Javascript.
-- **`PROYECTO-3/`**: Contiene proyecto Módulo-3: 3 Landing de Negocio (HTML & CSS).
-- **`PROYECTO-4/`**: Contiene Proyecto Módulo-4: Reservas Hoteleras.
-- **`PROYECTO-5/`**: Contiene proyecto Módulo-5: Aplicación Web con REACT.
-- **`PROYECTO-6/`**: Contiene Proyecto Módulo-6: Aplicación Backend con Autenticación.
-- **`PROYECTO-7/`**: Contiene proyecto Módulo-7: Aplicación Fullstack de Comercio Electrónico.
+- `Header` Sección que involucra el logo y las áreas principales del sitio.
 
+- `Main` Sección de presentación del producto al usuario. Debe de incluir su título, descripción y un elemento para introducir tu correo.
 
+- `Products` Sección para mostrar los artículos del sitio web. O en su caso, artículos de catálogo de productos
 
+- `Footer` Sección que incluye todas las áreas del sitio, incluyendo redes sociales.
+De manera opcional y recomendada, que la vista se adapte a móviles
 
-***¡ Vamos que se puede!***
+## 📂 Estructura del Proyecto
+
+- **`index.html`**: Contiene la estructura HTML de la Landing.
+- **`assets/`**: Contiene las carpetas de recursos que serán utilizados en el proyecto.
+- **`assets/css/`**: Contiene los estilos CSS del proyecto.
+- **`assets/img/`**: Contiene las imagenes utilizadas en el proyecto.
+
+## 📧 Contácto
+**Marcelo Riquelme**
+
+**Email**: luriquelme.dwfs1@bootcampudd.cl

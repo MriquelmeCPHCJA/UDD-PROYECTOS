@@ -1,0 +1,467 @@
+/* resetear ajustes del navegador */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Ajustes de medidas globales y hacer al rem de 10px */
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+ } 
+
+ /* Personalización del color del toggler del menu */
+
+ .custom-toggler.navbar-toggler {
+    border-color: white;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24' /%3E%3C/svg%3E");
+
+}
+
+/* -------------------------------------------------- */
+
+
+/* Estilo Flex a contenedores similares */
+
+.layout,.layout-top,.top-main,.cards-card {
+    display: flex;
+    flex-direction: column;
+}
+/* ------------------------------------- */
+
+/* Estilos al Header, Logo, Navbar y main */
+
+.layout-top {
+    width: 100%;
+    background-image: url(../img/beach-05.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.top-header,.top-logo {
+    display: flex;
+    flex-direction: row;
+}
+
+.top-header {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.top-logo{
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.logo-img {
+    width: 4rem;    
+}
+
+.nav-link,.nav-link:visited {
+    color: white;
+}
+
+.nav-link:hover {
+    color: #FFD700;
+}
+
+.top-main {
+    align-items: center;
+    flex-direction: row;
+    padding: 7% 5% 17% 5%;
+    gap: 20rem;
+}
+
+.top-main h1 {
+    font-family: "Caveat", cursive;
+    font-size: 4rem;
+    font-weight: 600;
+    color: white;
+    background-color: black;
+    width: 80%;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 2rem;
+    margin-bottom: 7rem;
+}
+
+.top-main p {
+    font-size: 6rem;
+    font-weight: 700;
+    text-align: justify;
+    color: white;
+}
+
+.btn-warning, .btn-info, .btn-mas {
+    border-radius: 1rem;
+    --bs-btn-font-weight: 800;
+    --bs-btn-font-size: 1.5rem;
+    --bs-btn-color: #FFF;
+}
+
+.btn-warning {
+    width: 50%;
+}
+
+
+.btn-ogd, .btn-mas {
+    --bs-btn-bg: #FFD700;
+    --bs-btn-border-color: #FFD700;
+    --bs-btn-hover-bg: #FFF;
+    --bs-btn-hover-border-color: #FFD700;
+    --bs-btn-hover-color: #FFD700;
+    margin-bottom: 0.5rem;
+}
+
+.btn-info {
+    --bs-btn-bg: #31D2F2;
+    --bs-btn-border-color: #31D2F2;
+    --bs-btn-hover-bg: #FFF;
+    --bs-btn-hover-border-color: #31D2F2;
+    --bs-btn-hover-color: #31D2F2;
+}
+
+
+.main-msg{
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.main-inscription {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: white;
+    width: 50%;
+    background-color: rgba(74, 182, 240, 0.6);
+    padding: 5rem;
+    border: white 0.2rem solid;
+    border-radius: 2rem;
+}
+
+.main-inscription h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-control {
+    width: 100%;
+}
+
+/* ------------------------------------------- */
+
+/* Estilos a la sección de Cards */
+
+.layout-cards {
+    width: 100%;
+    background-image: url(../img/beach-06.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(149, 151, 152, 0.7);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 4rem;
+    gap: 3rem;
+}
+
+.cards-card {
+    border: 0.6rem solid white;
+    border-radius: 1.6rem;
+    width: 45rem;
+    background-color: white;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.cards-card:hover{
+    transform: scale(1.02);
+    border: 0.5rem solid white;
+}
+
+
+.card-img {
+    width: 100%;
+    height: 80%;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.6rem 1.6rem 0 0;
+}
+
+.card-title {
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f6bc1fd8;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0 0 1.6rem 1.6rem;
+}
+
+.card-text {
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: black;
+    text-align: justify;
+    border-radius: 0 0 1.6rem 1.6rem;
+}
+
+/* ---------------------------------- */
+
+/* Estilos a la sección de Footer */
+
+.layout-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 4rem 1rem 4rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.908);
+}
+
+.footer-about, .footer-copy, .footer-minfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem 1rem 2rem;
+    width: 35%;
+    color:#7F7871;
+    text-align: center;
+    gap: 1rem;
+}
+
+.about-title h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #7F7871;
+}
+
+.about-btn{
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn-contact, .btn-work{
+    --bs-btn-font-weight: 600;
+    --bs-btn-font-size: 1.5rem;
+    --bs-btn-color: #7F7871;
+    --bs-btn-border-color: #7F7871;
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #fff;
+}
+
+.about-rrss {
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    padding: 1rem;
+}
+
+.about-rrss :hover{
+    color: #FFF;
+}
+
+.fab {
+    color: #7F7871;
+}
+
+li {
+    list-style: none;
+    color: #7F7871;
+}
+
+li a {
+    color: #7F7871;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+li a:visited {
+    color: #7F7871;
+}
+
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 1024px) {
+
+    .top-main {
+        padding: 3% 2% 8% 2%;
+        gap: 5rem;
+    }
+
+    .top-main h1 {
+        font-size: 2.5rem;
+    }
+
+    .top-main p {
+        font-size: 4rem;
+        font-weight: 500;
+    }
+
+    .main-inscription {
+        font-weight: 500;
+        padding: 2rem;
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+    html {
+        font-size: 8px;
+    }
+} 
+
+/* tablets, 768px y más) */
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 8px;
+    }
+
+    .layout-cards {
+        width: 100%;
+        background-image: url(../img/beach-06.jpg);
+        background-size: cover;
+        background-position: center;
+        background-color: rgba(149, 151, 152, 0.7);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+
+    .top-main {
+        display: grid;
+    }
+
+    .main-msg {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .main-inscription {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .btn-warning {
+        width: 100%;
+    }
+
+    .footer-about {
+        display: none;
+    }
+
+    .footer-minfo {
+        display: none;
+    }
+
+    .footer-copy {
+        width: 100%;
+    }
+
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 8px;
+    }
+
+    .top-main {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .top-main h1 {
+        width: 100%;
+        font-size: 2.5rem;
+    }
+
+    .top-main p {
+        text-align: left;
+        font-size: 4rem;
+        font-weight: 500;
+    }
+
+    .btn-warning {
+        width: 100%;
+    }
+    
+
+    .main-inscription {
+        display: none;
+    }
+
+    .layout-cards {
+        width: 100%;
+        background-image: url(../img/beach-06.jpg);
+        background-size: cover;
+        background-position: center;
+        background-color: rgba(149, 151, 152, 0.7);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 1rem;
+        gap: .8rem;
+    }
+
+    .cards-card {
+        border: 0.6rem solid white;
+        border-radius: 1.6rem;
+        width: 45%;
+        background-color: white;
+        transition: transform 0.3s;
+        cursor: pointer;
+    }
+
+    .footer-about {
+        display: none;
+    }
+
+    .footer-minfo {
+        display: none;
+    }
+
+    .footer-copy {
+        width: 100%;
+    }
+}
+

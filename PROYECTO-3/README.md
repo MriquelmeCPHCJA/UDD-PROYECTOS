@@ -38,6 +38,9 @@ De manera opcional y recomendada, que la vista se adapte a móviles
 - **`assets/css/`**: Contiene los estilos CSS del proyecto.
 - **`assets/img/`**: Contiene las imagenes utilizadas en el proyecto.
 
+## 🔲  Diagrama del proyecto
+<img src="diagrama.svg" alt="Diagrama Proyecto">
+
 ## 📧 Contácto
 **Marcelo Riquelme**
 

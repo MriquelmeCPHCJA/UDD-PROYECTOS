@@ -26,7 +26,7 @@ A medida que se vaya avanzando los Módulos, aparecerán la estructura correspon
 - **`PROYECTO-1/`**: Contiene proyecto Módulo-1: Algoritmo de Sistema de Costos (pseudocodigo).
 - **`PROYECTO-2/`**: Contiene Proyecto Módulo-2: Sistema de Votación en Javascript.
 - **`PROYECTO-3/`**: Contiene proyecto Módulo-3: 3 Landing de Negocio (HTML & CSS).
-- **`PROYECTO-4/`**: Contiene Proyecto Módulo-4: Reservas Hoteleras.
+- **[`PROYECTO-4`](https://github.com/MriquelmeCPHCJA/PROYECTO-4)**: Contiene Proyecto Módulo-4: Reservas Hoteleras.
 - **`PROYECTO-5/`**: Contiene proyecto Módulo-5: Aplicación Web con REACT.
 - **`PROYECTO-6/`**: Contiene Proyecto Módulo-6: Aplicación Backend con Autenticación.
 - **`PROYECTO-7/`**: Contiene proyecto Módulo-7: Aplicación Fullstack de Comercio Electrónico.

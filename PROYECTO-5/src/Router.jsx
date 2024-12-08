@@ -6,13 +6,14 @@ import { MovieDetails } from "./pages/MovieDetails";
 import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
 
-const Router = createBrowserRouter([
+export const Router = createBrowserRouter([
+    {   path: "/", element: <Home />},
     {
         path: "/", element: <Layout />,
         children: [
             { path: "/", element: <Home /> },
             { path: "/movies", element: <MoviesList /> },
-            { path: "/movies/:id", element: <MovieDetails /> },
+            { path: "/movie/:id", element: <MovieDetails /> },
             { path: "/about", element: <About /> },
             { path: "/contact", element: <Contact /> }
         ]

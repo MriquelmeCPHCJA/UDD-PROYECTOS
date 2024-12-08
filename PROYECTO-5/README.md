@@ -1,32 +1,8 @@
-<div align="center">
-    <h1> PROYECTO 5: Aplicación web con REACT </h1>
-    <h2>Luis Marcelo Riquelme</h2>
-</div>
+# React + Vite
 
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=vscode,html,css,git" />
-  </a>
-</p>
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-<div align="center">
-    <img alt="Static Badge" src="https://img.shields.io/badge/UDD-DWFS-orange">
-    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/MriquelmeCPHCJA/UDD-PROYECTOS?color=green">
-    <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/t/MriquelmeCPHCJA/UDD-PROYECTOS">
-</div>
+Currently, two official plugins are available:
 
-
-## 📚 Requerimientos del Proyecto
-
-
-## 📂 Estructura del Proyecto
-
-
-
-## 🔲  Diagrama del proyecto
-
-
-## 📧 Contácto
-**Marcelo Riquelme**
-
-**Email**: luriquelme.dwfs1@bootcampudd.cl
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

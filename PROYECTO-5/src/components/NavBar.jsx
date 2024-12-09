@@ -11,8 +11,14 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import '../components/NavBar.css';
+import { Link } from 'react-router-dom';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = [
+  { name: 'Home', path: '/' },
+  { name: 'Movies', path: '/movies' },
+  { name: 'About', path: '/about' },
+  { name: 'Contact', path: '/contact' }
+];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -30,12 +36,12 @@ function Navbar() {
       <AppBar position="static" >
         <Container maxWidth="xl 100%" className='css-barra-nav'>
           <Toolbar disableGutters>
-            <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+            <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color:'red' }} /> 
             <Typography
               variant="h6"
               noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
+              component={Link}
+              to="/"
               sx={{
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
@@ -77,18 +83,22 @@ function Navbar() {
                 sx={{ display: { xs: 'block', md: 'none' } }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                  <MenuItem key={page.name} onClick={handleCloseNavMenu} component={Link} to={page.path} >
+                    <Typography sx={{ textAlign: 'center' }}>{page.name}</Typography>
                   </MenuItem>
                 ))}
               </Menu>
             </Box>
-            <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+            <AdbIcon sx={{ 
+              display: { xs: 'flex', md: 'none' }, 
+              mr: 1,
+              color: 'red',}}
+               />
             <Typography
               variant="h5"
               noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
+              component={Link}
+              to="/"
               sx={{
                 mr: 2,
                 display: { xs: 'flex', md: 'none' },
@@ -96,20 +106,22 @@ function Navbar() {
                 fontFamily: 'monospace',
                 fontWeight: 700,
                 letterSpacing: '.3rem',
-                color: 'inherit',
+                color: 'red',
                 textDecoration: 'none',
               }}
             >
-              LOGO
+              MARFLIX
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {pages.map((page) => (
                 <Button
-                  key={page}
+                  component={Link}
+                  to={page.path}
+                  key={page.name}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: 'white', display: 'block' }}
                 >
-                  {page}
+                  {page.name}
                 </Button>
               ))}
             </Box>

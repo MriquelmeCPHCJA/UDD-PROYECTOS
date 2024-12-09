@@ -13,9 +13,8 @@ import AdbIcon from '@mui/icons-material/Adb';
 import '../components/NavBar.css';
 
 const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-function ResponsiveAppBar() {
+function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -29,7 +28,7 @@ function ResponsiveAppBar() {
 
   return (
       <AppBar position="static" >
-        <Container maxWidth="xl">
+        <Container maxWidth="xl 100%" className='css-barra-nav'>
           <Toolbar disableGutters>
             <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
             <Typography
@@ -43,7 +42,7 @@ function ResponsiveAppBar() {
                 fontFamily: 'monospace',
                 fontWeight: 700,
                 letterSpacing: '.3rem',
-                color: 'inherit',
+                color: 'red',
                 textDecoration: 'none',
               }}
             >
@@ -120,4 +119,4 @@ function ResponsiveAppBar() {
 
   );
 }
-export default ResponsiveAppBar;
+export default Navbar;

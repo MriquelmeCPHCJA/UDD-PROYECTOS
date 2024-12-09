@@ -11,7 +11,7 @@ const IMG_POSTER = 'https://image.tmdb.org/t/p/original'
 export const MoviesList = () => {
 
   const [movies, setMovies] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
 

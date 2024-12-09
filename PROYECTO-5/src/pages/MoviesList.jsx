@@ -27,9 +27,26 @@ export const MoviesList = () => {
       .finally(() => setLoading(false))
   }, []);
 
-  if (!loading) {
+
+  if (loading) {
     return (
-      <Grid2 container spacing={2} sx={{padding: '20px', backgroundColor: 'black', color: 'white'}}>
+      <Grid2 
+        container 
+        justifyContent="center" 
+        alignItems="center" 
+        sx={{height: '100vh'}}>
+      <CircularProgress />
+      </Grid2>
+    )
+  }
+
+    return (
+      <Grid2 container spacing={4} sx={{
+        padding: '20px', 
+        backgroundColor: 'black', 
+        color: 'white',
+        alignItems: "center",
+        justifyContent: "center"}}>
         {
         movies.map(movie => (
           <Grid2 item xs={12} md={6} lg={4} key={movie.id}>
@@ -41,16 +58,18 @@ export const MoviesList = () => {
               >
                 <CardMedia
                   component="img"
-                  height="140"
+                  height="420"
+
                   image={`${IMG_POSTER}/${movie.poster_path}`}
                   alt={movie.title}
+                  sx={{objectFit: 'contain'}}
                 />
-                <CardContent sx={{backgroundColor: 'black'}}>
+                {/* <CardContent sx={{backgroundColor: 'black'}}>
                   <Typography gutterBottom variant="h6" sx={{color: 'white'}}>
                     {movie.title}
                   </Typography>
 
-                </CardContent>
+                </CardContent> */}
               </CardActionArea>
             </Card>
           </Grid2>
@@ -58,12 +77,5 @@ export const MoviesList = () => {
         }
       </Grid2>
     )
-  } else {
-      return (
-        <Grid2 container justifyContent="center" alignItems="center" sx={{height: '100vh'}}>
-        <CircularProgress size="5rem" />
-        </Grid2>
-      )
-   }
 
 }

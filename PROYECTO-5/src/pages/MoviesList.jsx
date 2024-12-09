@@ -4,48 +4,50 @@ import { CardContent, CardMedia, Typography, CircularProgress, Card, CardActionA
 
 import '../components/moviesList.css'
 
-const API_URL = 'https://api.themoviedb.org/3'
+
 const API_KEY = 'f76d94834aca1cb630bca53ecf4e4c56'
+const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`
 const IMG_POSTER = 'https://image.tmdb.org/t/p/original'
 
 export const MoviesList = () => {
 
   const [movies, setMovies] = useState([])
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
 
     setLoading(true)
 
-    fetch(`${API_URL}/movie/popular?api_key=${API_KEY}`)
+    fetch(API_URL)
       .then(response => response.json())
       .then(data => { setMovies(data.results) })
-      .catch(error => console.error(error))
+      .catch(error => { 
+        console.log('Error de Fetch: ', error)
+      })
       .finally(() => setLoading(false))
   }, []);
 
   if (!loading) {
     return (
-      <Grid2 container spacing={2} sx={{padding: '20px'}}>
+      <Grid2 container spacing={2} sx={{padding: '20px', backgroundColor: 'black', color: 'white'}}>
         {
-        movies.map(recipe => (
-          <Grid2 item key={recipe.id} xs={12} md={6} lg={4}>
+        movies.map(movie => (
+          <Grid2 item xs={12} md={6} lg={4} key={movie.id}>
             <Card>
               <CardActionArea
-              component={Link}
-              to={`/recetas/${recipe.title}`}
-              state={{recipe}}
+                component={Link}
+                to={`/movie/${movie.title}`}
+                state={{movie}}
               >
                 <CardMedia
                   component="img"
-                  // width="10%"
-                  height="300px"
-                  image={`${IMG_POSTER}/${recipe.poster_path}`}
-                  alt={recipe.title}
+                  height="140"
+                  image={`${IMG_POSTER}/${movie.poster_path}`}
+                  alt={movie.title}
                 />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {recipe.title}
+                <CardContent sx={{backgroundColor: 'black'}}>
+                  <Typography gutterBottom variant="h6" sx={{color: 'white'}}>
+                    {movie.title}
                   </Typography>
 
                 </CardContent>

@@ -36,7 +36,7 @@ function Navbar() {
       <AppBar position="static" >
         <Container maxWidth="xl 100%" className='css-barra-nav'>
           <Toolbar disableGutters>
-            <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color:'red' }} /> 
+            {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color:'red' }} />  */}
             <Typography
               variant="h6"
               noWrap
@@ -55,7 +55,7 @@ function Navbar() {
               MARFLIX
             </Typography>
 
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <Box sx={{ flexGrow: 1, color:"red",  display: { xs: 'flex', md: 'none' } }}>
               <IconButton
                 size="large"
                 aria-label="account of current user"
@@ -89,11 +89,11 @@ function Navbar() {
                 ))}
               </Menu>
             </Box>
-            <AdbIcon sx={{ 
+            {/* <AdbIcon sx={{ 
               display: { xs: 'flex', md: 'none' }, 
               mr: 1,
               color: 'red',}}
-               />
+               /> */}
             <Typography
               variant="h5"
               noWrap

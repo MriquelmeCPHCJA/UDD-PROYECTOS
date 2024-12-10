@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import KeyboardDoubleArrowLeftOutlinedIcon from '@mui/icons-material/KeyboardDoubleArrowLeftOutlined';
-import KeyboardDoubleArrowRightOutlinedIcon from '@mui/icons-material/KeyboardDoubleArrowRightOutlined';
-import KeyboardArrowLeftOutlinedIcon from '@mui/icons-material/KeyboardArrowLeftOutlined';
-import KeyboardArrowRightOutlinedIcon from '@mui/icons-material/KeyboardArrowRightOutlined';
+
 import { CardContent, 
          CardMedia, 
          Typography, 
@@ -11,9 +8,6 @@ import { CardContent,
          Card, 
          CardActionArea, 
          Grid2, 
-         Container,
-         ButtonGroup,
-         Button,
          Pagination } from '@mui/material';
 
 import '../components/moviesList.css'
@@ -26,7 +20,7 @@ export const MoviesList = () => {
   const [movies, setMovies] = useState([])
   const [loading, setLoading] = useState(true)
   const [page, setPage] = useState(1)
-  const [totalPages, setTotalPages] = useState(20)
+  const [totalPages, setTotalPages] = useState(50)
   
   const changePage = (page) => {
     setPage(page)
@@ -41,6 +35,9 @@ export const MoviesList = () => {
     fetch(API_URL)
       .then(response => response.json())
       .then(data => { setMovies(data.results) })
+      // La siguiente linea trae 47557 páginas, no es necesario
+      // se adapto con la variable "page" para trabajar con useState en 50 páginas
+      // .then( setTotalPages(Math.ceil(movies.total_pages)) ) 
       .catch(error => { 
         console.log('Error de Fetch: ', error)
       })
@@ -88,12 +85,21 @@ export const MoviesList = () => {
                     sx={{objectFit: 'contain',  borderRadius: '15px'}}
                   />
 
-                  {/* <CardContent sx={{backgroundColor: 'black'}}>
-                    <Typography gutterBottom variant="h6" sx={{color: 'white'}}>
+                   <CardContent sx={{backgroundColor: 'black'}}>
+                    <Typography 
+                    gutterBottom 
+                    variant="h6" 
+                    sx={{
+                      color: 'white',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      whiteSpace: 'nowrap',
+                      textAlign: 'center',
+                      }}>
                       {movie.title}
                     </Typography>
 
-                  </CardContent> */}
+                  </CardContent>  
                 </CardActionArea>
               </Card>
             </Grid2>
@@ -112,8 +118,12 @@ export const MoviesList = () => {
                       color='primary'
                       count={totalPages}
                       page={page}
-                      onChange={(event, newPage) => {
-                        changePage(newPage);
+                      // este bloque es para activar las 47557 páginas
+                      // onChange={(event, newPage) => {
+                      //   changePage(newPage);
+                      // }}
+                      onChange={(event, page) => {
+                        changePage(page);
                       }}
                       sx={{backgroundColor: 'white', borderRadius: '15px'}}
               />

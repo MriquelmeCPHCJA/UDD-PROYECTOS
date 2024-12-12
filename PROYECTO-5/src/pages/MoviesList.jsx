@@ -10,9 +10,10 @@ import { CardContent,
          Grid2, 
          Pagination } from '@mui/material';
 
-import '../components/moviesList.css'
+const API_KEY = import.meta.env.VITE_API_KEY
 
-const API_KEY = 'f76d94834aca1cb630bca53ecf4e4c56'
+const marceloRiq = 'Af76d94834aca1cb630bca53ecf4e4c561'
+
 const IMG_POSTER = 'https://image.tmdb.org/t/p/original'
 
 export const MoviesList = () => {
@@ -30,7 +31,7 @@ export const MoviesList = () => {
 
     setLoading(true)
 
-    const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&page=${page}`
+    const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&page=${page}&language=es-MX`
 
     fetch(API_URL)
       .then(response => response.json())

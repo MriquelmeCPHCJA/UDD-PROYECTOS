@@ -12,7 +12,7 @@ import { CardContent,
 
 const API_KEY = import.meta.env.VITE_API_KEY
 
-const marceloRiq = 'Af76d94834aca1cb630bca53ecf4e4c561'
+// const marceloRiq = 'Af76d94834aca1cb630bca53ecf4e4c561'
 
 const IMG_POSTER = 'https://image.tmdb.org/t/p/original'
 
